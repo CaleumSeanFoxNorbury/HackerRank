@@ -19,5 +19,29 @@
 ***Answer:***
 
 ```
+    let a: number[] = [];
+    let b: number[] = [];
+    arr.forEach((x: number[], ix: number) => {
+        
+        x.forEach((y: number, iy: number) => {
+            if(ix === iy){
+                a.push(arr[ix][iy]);                
+            }        
+            
+            if(b.indexOf(arr[ix][((arr.length - 1) - ix)]) < 0){
+                b.push(arr[ix][((arr.length - 1) - ix)])                
+                
+            }
+        });
+    });
+    
+    let resA = a.reduce((partialSum, a) => partialSum + a, 0) 
+    let resB = b.reduce((partialSum, a) => partialSum + a, 0);
+    
+    if(resA > resB){
+        return resA - resB;
+    } else {
+        return resB - resA;
+    }    
 ```
 
