@@ -69,7 +69,7 @@
          res = res + s[i];
       } else {          
           if((indexOfChar + k) > 26){
-            let newIndex = ((indexOfChar + 2) - 26);
+            let newIndex = ((indexOfChar + k) - 26);
         
             if(newIndex <= 26){               
               isCap ? res = res + alpha[newIndex].toUpperCase() : res = res + alpha[newIndex];
@@ -77,7 +77,7 @@
               // go round again ...
             }
         } else {
-          isCap ? res = res + alpha[(indexOfChar + 2)].toUpperCase() : res = res + alpha[(indexOfChar + k)];
+          isCap ? res = res + alpha[(indexOfChar + k)].toUpperCase() : res = res + alpha[(indexOfChar + k)];
         }        
       }        
     }
