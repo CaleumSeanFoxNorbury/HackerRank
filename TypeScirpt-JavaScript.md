@@ -51,7 +51,7 @@
 
 ***Answer:***
 
-`// todo : this answer needs fixing`
+`// todo : this answer needs simplifying`
 
 ```
     let alpha = 'abcdefghijklmnopqrstuvwxyz'; 
