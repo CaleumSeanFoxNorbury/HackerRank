@@ -51,5 +51,36 @@
 
 ***Answer:***
 
+`// todo : this answer needs fixing`
+
 ```
+    let alpha = 'abcdefghijklmnopqrstuvwxyz'; 
+    let res = '';
+ 
+    for(let i = 0; i < s.length; i++){      
+      let indexOfChar = alpha.search(new RegExp(s[i], "i"));
+      let isCap = false;
+      
+      if(s[i] === s[i].toUpperCase()){
+        isCap = true;
+      }     
+      
+      if(indexOfChar === -1){
+         res = res + s[i];
+      } else {          
+          if((indexOfChar + k) > 26){
+            let newIndex = ((indexOfChar + 2) - 26);
+        
+            if(newIndex <= 26){               
+              isCap ? res = res + alpha[newIndex].toUpperCase() : res = res + alpha[newIndex];
+            } else {
+              // go round again ...
+            }
+        } else {
+          isCap ? res = res + alpha[(indexOfChar + 2)].toUpperCase() : res = res + alpha[(indexOfChar + k)];
+        }        
+      }        
+    }
+    
+    return res;
 ```
